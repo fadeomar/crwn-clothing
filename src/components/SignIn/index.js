@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 import FormInput from "../FormInput";
+import Button from "../Button";
 
 import "./style.scss";
 
@@ -46,7 +47,10 @@ class SignIn extends React.Component {
             label="Password"
           />
 
-          <input type="submit" value="submit Form" />
+          <Button type="submit" value="submit Form">
+            {" "}
+            Sign In
+          </Button>
         </form>
       </div>
     );
