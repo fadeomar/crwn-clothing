@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
+import FormInput from "../FormInput";
 
 import "./style.scss";
 
@@ -26,24 +27,24 @@ class SignIn extends React.Component {
         <h2>I already have an account</h2>
         <span>Sign in with your email and password</span>
         <form onSubmit={this.handleSubmit}>
-          <input
+          <FormInput
             name="email"
             type="email"
             id="email"
             value={this.state.email}
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
             required
+            label="Email"
           />
-          <label htmlFor="email">Email</label>
-          <input
+          <FormInput
             name="password"
             type="password"
             id="password"
             value={this.state.password}
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
             required
+            label="Password"
           />
-          <label htmlFor="password">Password</label>
 
           <input type="submit" value="submit Form" />
         </form>
