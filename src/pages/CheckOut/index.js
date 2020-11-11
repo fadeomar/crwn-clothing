@@ -7,6 +7,8 @@ import {
   selctCartTotal,
 } from "../../redux/casrt/cartSelector";
 
+import CheckoutItem from "../../components/CheckoutItem";
+
 import "./style.scss";
 
 const CheckoutPage = ({ cartItems, total }) => (
@@ -28,7 +30,9 @@ const CheckoutPage = ({ cartItems, total }) => (
         <span>Remove</span>
       </div>
     </div>
-    {cartItems.map((item) => item.name)}
+    {cartItems.map((item) => (
+      <CheckoutItem key={item.id} {...item} />
+    ))}
 
     <div className="total">
       <span>TOTAL: {total} </span>
